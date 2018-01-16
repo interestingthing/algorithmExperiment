@@ -58,7 +58,6 @@ public class Test {
     	BufferedWriter bw = new BufferedWriter(out);
     	Date begin = new Date();				//开始执行时间
     	String source = "";
-    	//int line = 0;
     	int result = 0;
     	while((source=br.readLine())!=null){
     		if(algosName.equals("BF"))

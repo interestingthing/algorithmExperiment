@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class BinarySearch {
     /**
-     * @param nums  The integer array.
+     * @param nums  The sorted integer array.
      * @param target  Target to find.
      * @return The first position of target. Position starts from 0.
      */
@@ -76,7 +76,7 @@ public class BinarySearch {
      * @param target, an integer
      * @return a boolean, indicate whether matrix contains target
      */
-    public boolean searchMatrix(int[][] matrix, int target) {
+    public static boolean searchMatrix(int[][] matrix, int target) {
         if (matrix == null || matrix.length == 0 || matrix[0] == null) {
             return false;
         }
@@ -95,16 +95,17 @@ public class BinarySearch {
         }
         return false;
     }
-    public static void main(String[] args) {
-    	int nums[]=new int[]{1,2,3,5,6,7,8};
-    	System.out.println(BinarySearch.binarySearch(nums,9));
-    	int[] range = BinarySearch.searchRange(nums,2);
-    	System.out.println("["+range[0]+","+range[1]+"]");
-    	Random r = new Random();
-    	int i=0;
-    	while(i<1000){
-    		System.out.println(r.nextInt(50));
-    		i++;
+    /**
+     * ±©Á¦ËÑË÷
+     * @param nums  The sorted integer array.
+     * @param target  Target to find.
+     * @return The first position of target. Position starts from 0.
+     */
+    public static int BFSearch(int[] nums, int target){
+    	for (int i = 0; i < nums.length; i++) {
+    		if(nums[i] == target)
+    			return i;
     	}
+    	return -1;
     }
 }
