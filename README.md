@@ -1,3 +1,3 @@
 # algorithmExperiment
- ## experiment one: package string_match
- ## experiment two: package binary_search
+ ## 1、experiment one: package string_match
+ ## 2、experiment two: package binary_search
